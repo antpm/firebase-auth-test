@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "77096988843",
+    "project_id": "authentication-test-bae86",
+    "storage_bucket": "authentication-test-bae86.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:77096988843:android:547fa9c5e17cc0c17b87ee",
+        "android_client_info": {
+          "package_name": "ca.anthony.firebaseauthenticationtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdfXkMC_a-izXRNaH6Insr3JoKQXoaNfs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
