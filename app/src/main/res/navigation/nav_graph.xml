@@ -28,5 +28,11 @@
         android:id="@+id/welcome"
         android:name="ca.anthony.firebaseauthenticationtest.Welcome"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_logIn"
+            app:destination="@id/logIn"
+            app:popUpTo="@+id/welcome"
+            app:popUpToInclusive="true"/>
+    </fragment>
 </navigation>

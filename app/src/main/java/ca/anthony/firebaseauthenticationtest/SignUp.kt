@@ -48,16 +48,21 @@ class SignUp : Fragment() {
     }
 
     private fun createAccount(view: View){
+        //create data that will be stored for the user from the textfield
         val userdata = hashMapOf(
             "text" to text.text.toString()
         )
+        //attempt to create user with the email and password fields
         auth.createUserWithEmailAndPassword(email.text.toString(), pass.text.toString())
             .addOnCompleteListener{task ->
+                //if successful, display success message
                 if (task.isSuccessful){
                     Toast.makeText(requireActivity(), "Account Created", Toast.LENGTH_SHORT).show()
+                    //get the current user and create a document in the users collection, then set that document with the userdata created earlier
                     val user = auth.currentUser
                     db.collection("users").document(user!!.uid).set(userdata)
                         .addOnSuccessListener {
+                            //when a user is created, they are signed in, so to make them have to properly log in, sign them out before navigating back to the login screen
                             auth.signOut()
                             Navigation.findNavController(view).popBackStack()
                         }
